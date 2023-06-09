@@ -33,7 +33,7 @@ jobs:
     - name: Install impress.js
       run: bundle exec slideshow install impress.js
     - name: Build slides
-      run: bundle exec slideshow build index.md -t impress.js --slide -o out
+      run: bundle exec slideshow build index.md -t impress.js --slide -o out && cp -r img out/
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
       with:
